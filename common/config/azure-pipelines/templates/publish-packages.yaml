@@ -8,3 +8,4 @@ steps:
     condition: and(succeeded(), eq(variables['Agent.OS'], 'Windows_NT'), eq(variables['Build.SourceBranch'], 'refs/heads/main'), ${{ parameters.shouldPublish }} )
     env:
       NPM_AUTH_TOKEN: $(npmToken)
+# this is going to have to be altered to do the next-version dance for an out of step repo
