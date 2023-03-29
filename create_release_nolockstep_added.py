@@ -130,7 +130,7 @@ def createRelease(tag):
     # Create GitHub release using the markdown file
     print("Publishing GitHub release...")
     cmd = ['gh', 'release', 'create', tag, '-F', ' ' +
-           fileName, '-t', '"v{0}"'.format(currentTag)]
+           fileName, '-t', '"v{0}"'.format(currentVer)]
     proc = subprocess.Popen(
         " ".join(cmd), stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     proc.wait()
